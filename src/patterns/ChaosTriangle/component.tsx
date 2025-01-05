@@ -76,7 +76,7 @@ export const ChaosTriangle = () => {
           ];
 
           ctx.beginPath();
-          ctx.arc(middle[0], middle[1], 2, 0, Math.PI * 2);
+          ctx.arc(middle[0], middle[1], 1.5, 0, Math.PI * 2);
           ctx.fill();
 
           lastPoint = middle;
