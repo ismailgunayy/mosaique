@@ -17,7 +17,11 @@
   border: none;
   font-weight: 100;
   cursor: pointer;
-  padding: 64px;
+  padding: 16px 8px;
+
+  &:hover {
+    color: darkgray;
+  }
 }
 
 .info {
