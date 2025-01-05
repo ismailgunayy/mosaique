@@ -14,11 +14,12 @@ import styles from "./style.module.scss";
 const { A, B, C, randomPoint } = getStartingPoints();
 
 export const ChaosTriangle = () => {
-  const canvasRef = createRef<HTMLCanvasElement>();
-  const textCanvasRef = createRef<HTMLCanvasElement>();
   const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
   const [textCtx, setTextCtx] = useState<CanvasRenderingContext2D | null>();
   const [isStarted, setIsStarted] = useState<boolean>(false);
+
+  const canvasRef = createRef<HTMLCanvasElement>();
+  const textCanvasRef = createRef<HTMLCanvasElement>();
 
   useEffect(() => {
     if (
@@ -62,58 +63,66 @@ export const ChaosTriangle = () => {
         ctx.beginPath();
         ctx.arc(randomPoint[0], randomPoint[1], 4, 0, Math.PI * 2);
         ctx.fill();
-        await sleep(1000);
+        await sleep(250);
 
         drawText(textCtx, steps[0], lastPoint);
-        await sleep(4000);
+        await sleep(3000);
         clearCanvas(textCtx);
 
-        const drawPoint = () => {
-          const vertex = vertices[random(0, 2, false)];
-          const middle = [
-            (vertex[0] + lastPoint[0]) / 2,
-            (vertex[1] + lastPoint[1]) / 2,
-          ];
+        const drawPoint = (times = 23) => {
+          for (let i = 0; i < times; i++) {
+            const vertex = vertices[random(0, 2, false)];
+            const middle = [
+              (vertex[0] + lastPoint[0]) / 2,
+              (vertex[1] + lastPoint[1]) / 2,
+            ];
 
-          ctx.beginPath();
-          ctx.arc(middle[0], middle[1], 1.5, 0, Math.PI * 2);
-          ctx.fill();
+            ctx.beginPath();
+            ctx.arc(middle[0], middle[1], 1, 0, Math.PI * 2);
+            ctx.fill();
 
-          lastPoint = middle;
+            lastPoint = middle;
+          }
         };
 
         // Step 1
-        drawPoint();
-        await sleep(750);
+        drawPoint(1);
+        await sleep(250);
         drawText(textCtx, steps[1], lastPoint);
-        await sleep(4000);
+        await sleep(3000);
         clearCanvas(textCtx);
 
         // Step 2
-        drawPoint();
-        await sleep(750);
+        drawPoint(1);
+        await sleep(250);
         drawText(textCtx, steps[2], lastPoint);
-        await sleep(4000);
+        await sleep(3000);
         clearCanvas(textCtx);
 
         // Loop for drawing points with different waiting times
-        const loop = async (wait: number) => {
-          for (let i = 0; i < 5; i++) {
-            drawPoint();
+        const loop = async (wait: number, times = 5) => {
+          for (let i = 0; i < times; i++) {
+            drawPoint(1);
             await sleep(wait);
           }
         };
 
-        await loop(1230);
+        await loop(750);
         await loop(500);
         await loop(250);
         await loop(100);
-        await loop(23);
+        await loop(23, 23);
+        await loop(15, 23);
+        await loop(5, 50);
+        await loop(3, 100);
+        await loop(2, 150);
+        await loop(1, 200);
 
         drawText(textCtx, "Remove the first point", randomPoint);
         await sleep(1500);
         ctx.clearRect(randomPoint[0] - 5, randomPoint[1] - 5, 10, 10);
         clearCanvas(textCtx);
+        await sleep(500);
 
         // Draw the whole shape
         setInterval(drawPoint, 0);
