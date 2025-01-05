@@ -157,10 +157,12 @@ export const ChaosTriangle = () => {
         ></canvas>
       </div>
       <div className={styles.info}>
-        In randomness, there is a raw power. Each unpredictable step, though
-        seemingly chaotic, carries the potential to shape something greater. The
-        strength lies in repetition—through relentless cycles, order and beauty
-        emerge from chaos.
+        Each unpredictable step, though seemingly chaotic, carries the potential
+        to shape something greater.
+        <br />
+        <br />
+        The strength lies in repetition—through relentless cycles, order and
+        beauty emerge from chaos.
       </div>
     </div>
   );
