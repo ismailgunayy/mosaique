@@ -6,4 +6,4 @@ Mosaique is a web project created to demonstrate the beauty of math through frac
 
 ### Available Visualisations
 
-- Serpiński Triangle
+- Chaos Triangle

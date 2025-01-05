@@ -10,6 +10,16 @@
   }
 }
 
+.button {
+  margin-top: 300px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  font-weight: 100;
+  cursor: pointer;
+  padding: 64px;
+}
+
 .info {
   position: absolute;
   right: 5vw;
@@ -17,9 +27,22 @@
   text-align: justify;
   max-width: 230px;
   font-style: italic;
+  font-size: 18px;
   line-height: 1.5;
 
   @media (max-width: 768px) {
     display: none;
   }
+}
+
+.canvasContainer {
+  position: relative;
+  width: 100vw;
+  height: 750px;
+}
+
+.canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
 }

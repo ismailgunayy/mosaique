@@ -10,7 +10,7 @@ const Home = () => {
       </h4>
       <h5 className={styles.listHeader}>Available Visualisations</h5>
       <div className={styles.navigation}>
-        <Link to="/sierpinski-triangle">Sierpiński Triangle</Link>
+        <Link to="/chaos-triangle">Chaos Triangle</Link>
       </div>
     </div>
   );
