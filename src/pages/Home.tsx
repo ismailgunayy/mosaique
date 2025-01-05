@@ -4,7 +4,8 @@ import styles from "./Home.module.scss";
 const Home = () => {
   return (
     <div className={styles.container}>
-      <h4>
+      <h1 className={styles.header}>Mosaique</h1>
+      <h4 className={styles.slogan}>
         <em>created to demonstrate the beauty of math</em>
       </h4>
       <h5 className={styles.subheader}>Available Visualisations</h5>
