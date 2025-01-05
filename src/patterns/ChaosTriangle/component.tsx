@@ -156,7 +156,7 @@ export const ChaosTriangle = () => {
           className={styles.canvas}
         ></canvas>
       </div>
-      <div className={styles.info}>
+      <div className={styles.quote}>
         Each unpredictable step, though seemingly chaotic, carries the potential
         to shape something greater.
         <br />
