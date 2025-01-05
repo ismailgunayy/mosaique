@@ -77,24 +77,26 @@ export const ChaosTriangle = () => {
 
           ctx.beginPath();
           ctx.arc(middle[0], middle[1], 2, 0, Math.PI * 2);
-
           ctx.fill();
 
           lastPoint = middle;
         };
 
+        // Step 1
         drawPoint();
         await sleep(750);
         drawText(textCtx, steps[1], lastPoint);
         await sleep(4000);
         clearCanvas(textCtx);
 
+        // Step 2
         drawPoint();
         await sleep(750);
         drawText(textCtx, steps[2], lastPoint);
         await sleep(4000);
         clearCanvas(textCtx);
 
+        // Loop for drawing points with different waiting times
         const loop = async (wait: number) => {
           for (let i = 0; i < 5; i++) {
             drawPoint();
