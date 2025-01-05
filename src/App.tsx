@@ -15,7 +15,7 @@ const Navigation = () => {
 
   return location.pathname == "/" ? null : (
     <div className={styles.navigation}>
-      <Link to="/">Home</Link>
+      <Link to="/">Back</Link>
     </div>
   );
 };

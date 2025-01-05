@@ -4,6 +4,10 @@
 
 .header {
   margin: 0;
+
+  @media (max-width: 768px) {
+    margin: 40px 0 0;
+  }
 }
 
 .info {
@@ -13,4 +17,8 @@
   right: 5vw;
   top: 15vh;
   font-style: italic;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
