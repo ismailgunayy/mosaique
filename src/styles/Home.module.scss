@@ -3,16 +3,19 @@
 }
 
 .header {
-  margin: 0 auto 8px;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 .slogan {
   margin: 0;
-  font-weight: normal;
+  font-style: italic;
+
+  margin-bottom: 64px;
 }
 
-.subheader {
-  margin: 64px auto 8px;
+.listHeader {
+  margin-bottom: 8px;
 }
 
 .navigation {

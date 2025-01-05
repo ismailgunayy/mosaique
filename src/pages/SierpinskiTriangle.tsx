@@ -1,14 +1,14 @@
 import { createRef, useEffect, useState } from "react";
 
 import { random } from "lodash";
-import styles from "./SierpinskiTriangle.module.scss";
+import styles from "../styles/SierpinskiTriangle.module.scss";
 
-const canvasWidth = Math.min(750, window.innerWidth);
+const canvasWidth = Math.min(800, window.innerWidth);
 const canvasHeight = Math.min(750, window.innerHeight);
 
 const A = [canvasWidth / 2, 75];
-const B = [25, canvasHeight - 75];
-const C = [canvasWidth - 25, canvasHeight - 75];
+const B = [25, canvasHeight - 25];
+const C = [canvasWidth - 25, canvasHeight - 25];
 
 // const A = [Math.random() * canvasWidth, Math.random() * canvasHeight];
 // const B = [Math.random() * canvasWidth, Math.random() * canvasHeight];

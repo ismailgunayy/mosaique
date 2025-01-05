@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styles from "./Home.module.scss";
+import styles from "../styles/Home.module.scss";
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <h4 className={styles.slogan}>
         <em>created to demonstrate the beauty of math</em>
       </h4>
-      <h5 className={styles.subheader}>Available Visualisations</h5>
+      <h5 className={styles.listHeader}>Available Visualisations</h5>
       <div className={styles.navigation}>
         <Link to="/sierpinski-triangle">Sierpiński Triangle</Link>
       </div>
