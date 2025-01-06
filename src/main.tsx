@@ -1,5 +1,5 @@
-import "./styles/reset.css";
-import "./styles/main.css";
+import "./styles/reset.scss";
+import "./styles/main.scss";
 
 import App from "./App.tsx";
 import { StrictMode } from "react";

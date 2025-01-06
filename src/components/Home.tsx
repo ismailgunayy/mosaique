@@ -6,7 +6,7 @@ const Home = () => {
     <div className={styles.container}>
       <h1 className={styles.header}>Mosaique</h1>
       <h4 className={styles.slogan}>
-        <em>created to demonstrate the beauty of math</em>
+        created to demonstrate the beauty of math
       </h4>
       <h5 className={styles.listHeader}>Available Visualisations</h5>
       <div className={styles.navigation}>
