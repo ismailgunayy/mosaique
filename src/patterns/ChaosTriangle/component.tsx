@@ -99,24 +99,11 @@ export const ChaosTriangle = () => {
         await sleep(3000);
         clearCanvas(textCtx);
 
-        // Loop for drawing points with different waiting times
-        const loop = async (wait: number, times = 5) => {
-          for (let i = 0; i < times; i++) {
-            drawPoint(1);
-            await sleep(wait);
-          }
-        };
-
-        await loop(750);
-        await loop(500);
-        await loop(250);
-        await loop(100);
-        await loop(23, 23);
-        await loop(15, 23);
-        await loop(5, 50);
-        await loop(3, 100);
-        await loop(2, 150);
-        await loop(1, 200);
+        // Loop for drawing points with decreasing waiting times
+        for (let i = 1; i < 750; i++) {
+          drawPoint(1);
+          await sleep(750 / i);
+        }
 
         drawText(textCtx, "Remove the first point", randomPoint);
         await sleep(1500);
