@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../styles/Home.module.scss";
+import { routes } from "../routes";
 
 const Home = () => {
   return (
@@ -10,7 +11,11 @@ const Home = () => {
       </h4>
       <h5 className={styles.listHeader}>Available Visualisations</h5>
       <div className={styles.navigation}>
-        <Link to="/chaos-triangle">Chaos Triangle</Link>
+        {routes.slice(1).map((route, index) => (
+          <Link to={route.path} key={index}>
+            {route.name}
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -1,25 +1,23 @@
 import Home from "./components/Home";
 import { PatternWrapper } from "./components/PatternWrapper";
-import ChaosTriangle from "./patterns/ChaosTriangle";
+import { patterns } from "./patterns/patterns";
+import { generatePath } from "./utils/generatePath";
 
 type TRoute = {
   path: string;
+  name: string;
   element: React.ReactNode;
 };
 
 export const routes: TRoute[] = [
-  { path: "/", element: <Home /> },
   {
-    path: "/chaos-triangle",
-    element: (
-      <PatternWrapper
-        name="Chaos Triangle"
-        quote={[
-          "Each unpredictable step, though seemingly chaotic, carries the potential  to shape something greater.",
-          "The strength lies in repetition—through relentless cycles, order and beauty emerge from chaos.",
-        ]}
-        component={ChaosTriangle}
-      />
-    ),
+    path: "/",
+    name: "Home",
+    element: <Home />,
   },
+  ...patterns.map((pattern) => ({
+    path: generatePath(pattern.name),
+    name: pattern.name,
+    element: <PatternWrapper {...pattern} />,
+  })),
 ];

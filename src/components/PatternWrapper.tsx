@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import styles from "../styles/PatternWrapper.module.scss";
 
 export interface IPatternWrapper {
@@ -31,9 +31,9 @@ export const PatternWrapper = ({ name, quote, component }: IPatternWrapper) => {
       </>
       <div className={styles.quote}>
         {quote.map((line) => (
-          <>
+          <Fragment key={line}>
             {line} <br /> <br />
-          </>
+          </Fragment>
         ))}
       </div>
     </div>
