@@ -1,4 +1,4 @@
-import { canvasHeight, canvasWidth } from "../../constants";
+import { canvasHeight, canvasWidth } from "../../utils/constants";
 import {
   clearCanvas,
   drawText,
@@ -13,10 +13,13 @@ import styles from "./style.module.scss";
 
 const { A, B, C, randomPoint } = getStartingPoints();
 
-export const ChaosTriangle = () => {
+interface IChaosTriangle {
+  isStarted: boolean;
+}
+
+export const ChaosTriangle = ({ isStarted }: IChaosTriangle) => {
   const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
   const [textCtx, setTextCtx] = useState<CanvasRenderingContext2D | null>();
-  const [isStarted, setIsStarted] = useState<boolean>(false);
 
   const canvasRef = createRef<HTMLCanvasElement>();
   const textCanvasRef = createRef<HTMLCanvasElement>();
@@ -117,40 +120,20 @@ export const ChaosTriangle = () => {
     })();
   }, [ctx, textCtx, isStarted]);
 
-  const handleClick = () => {
-    setIsStarted(true);
-  };
-
   return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>Chaos Triangle</h1>
-      {!isStarted && (
-        <button className={styles.button} onClick={handleClick}>
-          Click to start
-        </button>
-      )}
-      <div className={styles.canvasContainer}>
-        <canvas
-          ref={canvasRef}
-          width={canvasWidth}
-          height={canvasHeight}
-          className={styles.canvas}
-        ></canvas>
-        <canvas
-          ref={textCanvasRef}
-          width={canvasWidth}
-          height={canvasHeight}
-          className={styles.canvas}
-        ></canvas>
-      </div>
-      <div className={styles.quote}>
-        Each unpredictable step, though seemingly chaotic, carries the potential
-        to shape something greater.
-        <br />
-        <br />
-        The strength lies in repetition—through relentless cycles, order and
-        beauty emerge from chaos.
-      </div>
+    <div className={styles.canvasContainer}>
+      <canvas
+        ref={canvasRef}
+        width={canvasWidth}
+        height={canvasHeight}
+        className={styles.canvas}
+      ></canvas>
+      <canvas
+        ref={textCanvasRef}
+        width={canvasWidth}
+        height={canvasHeight}
+        className={styles.canvas}
+      ></canvas>
     </div>
   );
 };

@@ -1,4 +1,8 @@
-import { canvasHeight, canvasWidth, maxCanvasHeight } from "../../constants";
+import {
+  canvasHeight,
+  canvasWidth,
+  maxCanvasHeight,
+} from "../../utils/constants";
 
 export const steps = [
   "Pick a random point inside the triangle",
