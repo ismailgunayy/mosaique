@@ -4,6 +4,11 @@ Mosaique is a web project created to demonstrate the beauty of math through frac
 
 ## [See on action](https://mosaique-nine.vercel.app/)
 
-### Available Visualisations
+### List of Visualisations
 
-- Chaos Triangle
+- [x] Chaos Triangle
+- [ ] Barnsley Fern
+- [ ] Koch Snowflake
+- [ ] Dragon Curve
+- [ ] Julia Set
+- [ ] Apollonian Gasket
