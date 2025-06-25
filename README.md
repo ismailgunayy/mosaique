@@ -17,7 +17,7 @@ yarn
 yarn dev
 ```
 
-or with Docker 
+or with Docker
 
 ```bash
 docker compose up

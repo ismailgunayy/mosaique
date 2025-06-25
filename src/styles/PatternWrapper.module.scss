@@ -1,40 +1,40 @@
 .container {
-  overflow-y: hidden;
+	overflow-y: hidden;
 }
 
 .header {
-  font-size: 32px;
+	font-size: 32px;
 
-  @media (max-width: 768px) {
-    margin: 16px 0 0;
-  }
+	@media (max-width: 768px) {
+		margin: 16px 0 0;
+	}
 }
 
 .button {
-  margin-top: 300px;
-  font-size: 30px;
-  background-color: transparent;
-  border: none;
-  font-weight: 100;
-  cursor: pointer;
-  padding: 16px 8px;
+	margin-top: 300px;
+	font-size: 30px;
+	background-color: transparent;
+	border: none;
+	font-weight: 100;
+	cursor: pointer;
+	padding: 16px 8px;
 
-  &:hover {
-    color: darkgray;
-  }
+	&:hover {
+		color: darkgray;
+	}
 }
 
 .quote {
-  position: absolute;
-  right: 5vw;
-  top: 64px;
-  text-align: justify;
-  max-width: 230px;
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.5;
+	position: absolute;
+	right: 5vw;
+	top: 64px;
+	text-align: justify;
+	max-width: 230px;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 1.5;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
+	@media (max-width: 768px) {
+		display: none;
+	}
 }

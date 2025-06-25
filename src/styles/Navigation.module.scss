@@ -1,13 +1,13 @@
 .navigation {
-  position: absolute;
-  top: 64px;
-  left: 8vw;
-  height: 32px;
-  display: flex;
-  align-items: center;
+	position: absolute;
+	top: 64px;
+	left: 8vw;
+	height: 32px;
+	display: flex;
+	align-items: center;
 
-  @media (max-width: 768px) {
-    left: 16px;
-    top: 32px;
-  }
+	@media (max-width: 768px) {
+		left: 16px;
+		top: 32px;
+	}
 }
