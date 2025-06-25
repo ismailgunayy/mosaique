@@ -3,24 +3,34 @@
 }
 
 .header {
-	font-size: 48px;
-	margin-bottom: 16px;
+	font-size: 64px;
+	margin-bottom: 8px;
 }
 
-.slogan {
+.subheader {
 	margin: 0 auto 64px;
 	font-style: italic;
-	font-size: 18px;
-	opacity: 0.8;
+	font-size: 24px;
+	opacity: 0.7;
 }
 
 .listHeader {
+	width: fit-content;
 	font-size: 20px;
-	margin-bottom: 16px;
+	margin: 0 auto 8px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #ccc;
 }
 
 .navigation {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+}
+
+.navItem {
+	width: fit-content;
+	margin: 0 auto;
+	list-style-type: disc;
+	color: #7a80fc;
 }

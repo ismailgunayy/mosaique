@@ -12,7 +12,7 @@ type TRoute = {
 export const routes: TRoute[] = [
 	{
 		path: "/",
-		name: "Home",
+		name: "home",
 		element: <Home />
 	},
 	...patterns.map((pattern) => ({

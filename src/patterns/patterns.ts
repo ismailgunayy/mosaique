@@ -3,10 +3,10 @@ import SierpinskiTriangle from "./SierpinskiTriangle";
 
 export const patterns: IPatternWrapper[] = [
 	{
-		name: "Sierpinski Triangle",
+		name: "sierpinski triangle",
 		quote: [
-			"Each unpredictable step, though seemingly chaotic, carries the potential  to shape something greater.",
-			"The strength lies in repetition—through relentless cycles, order and beauty emerge from chaos."
+			"each unpredictable step, though seemingly chaotic, carries the potential to shape something greater.",
+			"the strength lies in repetition—through relentless cycles, order and beauty emerge from chaos."
 		],
 		component: SierpinskiTriangle
 	}
