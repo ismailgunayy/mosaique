@@ -57,7 +57,6 @@ export const ChaosTriangle = ({ isStarted }: IChaosTriangle) => {
 				ctx.beginPath();
 				ctx.arc(randomPoint[0], randomPoint[1], 4, 0, Math.PI * 2);
 				ctx.fill();
-				await sleep(250);
 
 				drawText(textCtx, steps[0], lastPoint);
 				await sleep(3000);
@@ -78,15 +77,19 @@ export const ChaosTriangle = ({ isStarted }: IChaosTriangle) => {
 
 				// Step 1
 				drawPoint(1);
-				await sleep(250);
 				drawText(textCtx, steps[1], lastPoint);
 				await sleep(3000);
 				clearCanvas(textCtx);
 
 				// Step 2
 				drawPoint(1);
-				await sleep(250);
 				drawText(textCtx, steps[2], lastPoint);
+				await sleep(3000);
+				clearCanvas(textCtx);
+
+				// Step 3
+				drawPoint(1);
+				drawText(textCtx, steps[3], lastPoint);
 				await sleep(3000);
 				clearCanvas(textCtx);
 
@@ -96,7 +99,7 @@ export const ChaosTriangle = ({ isStarted }: IChaosTriangle) => {
 					await sleep(750 / i);
 				}
 
-				drawText(textCtx, "Remove the first point", randomPoint);
+				drawText(textCtx, "Can you see it?", randomPoint);
 				await sleep(1500);
 				ctx.clearRect(randomPoint[0] - 5, randomPoint[1] - 5, 10, 10);
 				clearCanvas(textCtx);

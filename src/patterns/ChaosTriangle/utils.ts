@@ -3,7 +3,8 @@ import { canvasHeight, canvasWidth, maxCanvasHeight } from "../../utils/constant
 export const steps = [
 	"Pick a random point inside the triangle",
 	"Move halfway toward a random vertex",
-	"Repeat the process"
+	"Halfway again",
+	"And again"
 ];
 
 // This function ensures the random points stay away from the edges
