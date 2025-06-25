@@ -25,7 +25,7 @@ docker compose up
 
 ### List of Visualisations
 
-- [x] Chaos Triangle
+- [x] Sierpinski Triangle
 - [ ] Barnsley Fern
 - [ ] Koch Snowflake
 - [ ] Dragon Curve

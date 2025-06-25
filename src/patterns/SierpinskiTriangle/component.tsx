@@ -7,11 +7,11 @@ import styles from "./style.module.scss";
 
 const { A, B, C, randomPoint } = getStartingPoints();
 
-interface IChaosTriangle {
+interface ISierpinskiTriangle {
 	isStarted: boolean;
 }
 
-export const ChaosTriangle = ({ isStarted }: IChaosTriangle) => {
+export const SierpinskiTriangle = ({ isStarted }: ISierpinskiTriangle) => {
 	const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
 	const [textCtx, setTextCtx] = useState<CanvasRenderingContext2D | null>();
 
